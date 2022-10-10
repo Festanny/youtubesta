@@ -97,8 +97,8 @@
 
 .slick-next:before
 {
-    content: '';
-	background-image: url(../img/arrow.svg);
+    content: '1';
+	/* background-image: url(../img/arrow.svg); */
 	position: absolute;
     background-repeat: no-repeat;
     background-position: 50%;
@@ -110,8 +110,8 @@
 }
 .slick-prev:before
 {
-    content: '';
-	background-image: url(../img/arrow.svg);
+    content: '2';
+	/* background-image: url(../img/arrow.svg); */
 	position: absolute;
     background-repeat: no-repeat;
     background-position: 50%;
