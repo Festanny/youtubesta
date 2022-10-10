@@ -308,6 +308,9 @@ section.featuresOfUse {
     font-size: 20px;
     margin-bottom: 10px;
 }
+.startPromote .startPromoteMain .order-block .carousel-form .item .qty-sum .rangeBlock {
+    position: relative;
+}
 .startPromote .startPromoteMain .order-block .carousel-form .item .qty-sum .qty {
     margin-left: 30px;
 }
@@ -880,4 +883,65 @@ footer .footer_sub .item:nth-child(2) {
 }
 footer .footer_sub .item:nth-child(3) {
     text-align: right;
+}
+
+.vast-service-order-now-arrow-animation[data-v-f3978fb4] {
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    height: 16px;
+    width: 80px;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.vast-service-order-now-arrow-animation__item--delay1[data-v-f3978fb4] {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+.vast-service-order-now-arrow-animation__item[data-v-f3978fb4] {
+    position: absolute;
+    top: 3px;
+    opacity: 0;
+    -webkit-animation: arrowSlide-data-v-f3978fb4 5s linear infinite;
+    animation: arrowSlide-data-v-f3978fb4 5s linear infinite;
+}
+
+.startPromote .startPromoteMain .order-block .carousel-form .item .qty-sum .rangeBlock .arrowEff {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+}
+.startPromote .startPromoteMain .order-block .carousel-form .item .qty-sum .rangeBlock .arrowEff .arrowBlock {
+    width: 0;
+	height: 0;
+	border-top: 5px solid transparent;
+	border-left: 10px solid var(--color-5);
+	border-bottom: 5px solid transparent;
+    animation: arrowsEffects 3s linear infinite;
+    opacity: 0;
+}
+
+@keyframes arrowsEffects {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    } 33% {
+        opacity: 1;
+        -webkit-transform: translateX(20px);
+        transform: translateX(20px);
+    } 66% {
+        opacity: 1;
+        -webkit-transform: translateX(40px);
+        transform: translateX(40px);
+    } 100% {
+        opacity: 0;
+        -webkit-transform: translateX(60px);
+        transform: translateX(60px);
+    }
 }
