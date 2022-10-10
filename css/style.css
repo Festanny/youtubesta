@@ -113,6 +113,11 @@ header .btn-header .nav-lk-lang a {
     padding: 12px 15px;
     display: block;
 }
+header .btn-header .nav-lk-lang .lk-user {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
 .welcomeBlock {
     position: relative;
 }
