@@ -1,5 +1,7 @@
 :root {
     --bg: #fff;
+    --bgDark: #212121;
+    --bgDark2: #191919;
     --white: #fff;
     --bgGray: #F9F9F9;
     --color-1: #3B3663;
@@ -45,7 +47,8 @@ a {
 a:hover {
     color: var(--white);
 }
-input {
+input,
+textarea {
     outline: none;
     border: 0;
 }
@@ -223,9 +226,12 @@ header .btn-header .nav-lk-lang a {
     text-align: center;
     margin-top: 45px;
 }
-.linkA a {
+.linkA a,
+.linkA input[type="button"] {
     display: inline-block;
     padding: 10px 64px;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 section:not(.welcomeBlock):not(.featuresOfUse) {
     padding: 70px 0;
@@ -752,4 +758,121 @@ section.featuresOfUse {
 }
 .freeGuide .info-block-guide .block.dieBlock .text2 span {
     color: var(--color-3);
+}
+.questions {
+    background-color: var(--color-5);
+    color: var(--white);
+}
+.questions .questionsBlock .text1,
+.questions .questionsBlock .text2 {
+    text-align: center;
+}
+.questions .questionsBlock .text1 {
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+.questions .questionsBlock .text2 {
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.questions .questionsBlock .info-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.questions .questionsBlock .info-block .block input,
+.questions .questionsBlock .info-block .block textarea {
+    width: 100%;
+    border-radius: 6px;
+    padding: 15px 20px;
+}
+.questions .questionsBlock .info-block .block:first-of-type {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+}
+.questions .questionsBlock .info-block .block textarea {
+    height: 100%;
+}
+.questions .questionsBlock .linkA {
+    margin-top: 75px;
+}
+.questions .questionsBlock .linkA input {
+    padding: 11px 30px;
+    background: var(--gr);
+    color: var(--white);
+    border-radius: 6px;
+}
+footer {
+    background-color: var(--bgDark);
+    color: var(--white)
+}
+footer .footer {
+    padding: 55px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    gap: 95px;
+}
+footer .footer .block .img-logo {
+    width: 100%;
+    height: 52px;
+}
+footer .footer .block .img-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+footer .footer .block ul.navA {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+footer .footer .block.linkSoc {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+footer .footer .block.linkSoc a {
+    width: 26px;
+    height: 26px;
+    display: block;
+}
+footer .footer .block.linkSoc a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+footer .footer .block.contactEmail {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+footer .footer .block.contactEmail a {
+    display: flex;
+}
+footer .footer .block.contactEmail a img {
+    width: 26px;
+    height: 26px;
+    object-fit: contain;
+    margin-right: 13px;
+}
+footer .footer_subMain {
+    padding: 20px 0;
+    background-color: var(--bgDark2);
+    font-weight: 100;
+}
+footer .footer_sub {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+footer .footer_sub .item:nth-child(2) {
+    text-align: center;
+}
+footer .footer_sub .item:nth-child(3) {
+    text-align: right;
 }
