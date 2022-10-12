@@ -67,13 +67,18 @@ var contentCount = $('.startPromote .order-block .carousel-form .item .qty-sum i
     commission = Number($('.startPromote .paymentMain .payment .methodInput select option:selected').attr('data-com-sys')) / 100;
     $('.summaryInfo .commissionText span.commission').text((commission * 100).toFixed(1));
     for (var i=1; i<=contentCount; i++) {
-        if ($('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .title-service input[type="checkbox"]').is(':checked') && $('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .qty-sum input[type="range"]').val() != '0') {
-            $('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .title-service input[type="checkbox"]').prop('checked', false);
-        } else if ($('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .qty-sum input[type="range"]').val() != '0') {
-            $('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .title-service input[type="checkbox"]').prop('checked', true);
-        }
+        turnOnOrder(i);
         if ($('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .title-service input[type="checkbox"]').is(':checked')) {
             sumAllOrder = sumAllOrder + Number($('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .qty-sum .sum span').text());
+            
+            var rangeInputBlock = $('.startPromote .startPromoteMain .order-block .item[data-input="'+ i +'"] .qty-sum input'),
+                elemInput = $(rangeInputBlock)[0],
+                coefficient = $(rangeInputBlock).attr('data-coefficient'),
+                elemInputCoast = elemInput.value * coefficient;
+            $('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .qty-sum .sum span').text(elemInputCoast);
+
+        } else {
+            $('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .qty-sum .sum span').html(0);
         }
         sumComm = sumAllOrder * commission;
         $('.summaryInfo .commissionText .allСommissionPaymentForm').text(sumComm.toFixed(2))
@@ -82,8 +87,13 @@ var contentCount = $('.startPromote .order-block .carousel-form .item .qty-sum i
 }
 tabEdit()
 
-// function turnOnOrder() {
-//     if () {
+function turnOnOrder(i) {
+    var inputRange = $('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .qty-sum input[type="range"]'),
+        check = $('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .title-service input[type="checkbox"]');
 
-//     }
-// }
+    inputRange.on('change', function() {
+        if (inputRange.val() > 0) {
+            check.prop('checked', true);
+        }
+    }) 
+}
