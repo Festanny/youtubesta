@@ -25,7 +25,7 @@ $('.carousel-form').slick({
         }
       },
       {
-        breakpoint: 574,
+        breakpoint: 767,
         settings: {
           slidesToShow: 1,
         }

@@ -603,7 +603,7 @@ section.featuresOfUse {
     content: '01.';
     top: -25px;
 }
-.work .workMain .info-block .item:nth-of-type(2) .textBlock::after {
+.work .workMain .info-block .item:nth-of-type(10) .textBlock::after {
     content: '02.';
     bottom: -25px;
 }
@@ -611,7 +611,7 @@ section.featuresOfUse {
     content: '03.';
     top: -25px;
 }
-.work .workMain .info-block .item:nth-of-type(4) .textBlock::after {
+.work .workMain .info-block .item:nth-of-type(12) .textBlock::after {
     content: '04.';
     bottom: -25px;
 }
