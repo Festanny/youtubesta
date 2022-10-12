@@ -70,15 +70,15 @@ var contentCount = $('.startPromote .order-block .carousel-form .item .qty-sum i
         turnOnOrder(i);
         if ($('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .title-service input[type="checkbox"]').is(':checked')) {
             sumAllOrder = sumAllOrder + Number($('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .qty-sum .sum span').text());
-            
             var rangeInputBlock = $('.startPromote .startPromoteMain .order-block .item[data-input="'+ i +'"] .qty-sum input'),
                 elemInput = $(rangeInputBlock)[0],
                 coefficient = $(rangeInputBlock).attr('data-coefficient'),
                 elemInputCoast = elemInput.value * coefficient;
             $('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .qty-sum .sum span').text(elemInputCoast);
-
+            $('.startPromote .startPromoteMain .order-block .carousel-form .item[data-input="'+ i +'"] .btn-settings a.true').removeClass('true');
         } else {
             $('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .qty-sum .sum span').html(0);
+            $('.startPromote .startPromoteMain .order-block .carousel-form .item[data-input="'+ i +'"] .btn-settings a').addClass('true');
         }
         sumComm = sumAllOrder * commission;
         $('.summaryInfo .commissionText .allСommissionPaymentForm').text(sumComm.toFixed(2))
