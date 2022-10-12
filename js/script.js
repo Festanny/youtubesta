@@ -92,8 +92,8 @@ function turnOnOrder(i) {
         check = $('.startPromote .order-block .carousel-form .item[data-input="'+ i +'"] .title-service input[type="checkbox"]');
 
     inputRange.on('change', function() {
-        if (inputRange.val() > 0) {
+        if (Number(inputRange.val()) > Number(inputRange.attr('min'))) {
             check.prop('checked', true);
         }
-    }) 
+    })
 }
