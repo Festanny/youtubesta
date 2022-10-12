@@ -32,12 +32,66 @@ $('.carousel-form').slick({
       }
     ]
 });
-
 $('.next-rev').click(()=>{
-    $('.carousel-form').slick('slickNext')
+    $('.carousel-form').slick('slickNext');
 });
 $('.prev-rev').click(() => {
-    $('.carousel-form').slick('slickPrev')
+    $('.carousel-form').slick('slickPrev');
+});
+
+// слайдер для work
+$('.work-carousel').slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: false,
+    infinite: false,
+    draggable: false,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
+});
+$('.next-rev-work').click(()=>{
+    $('.work-carousel').slick('slickNext');
+});
+$('.prev-rev-work').click(() => {
+    $('.work-carousel').slick('slickPrev');
+});
+
+// слайдер для quick order
+$('.featuresOfUse-carousel').slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    dots: true,
+    infinite: false,
+    draggable: false,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+        }
+      }
+    ]
 });
 
 // quantity and coast (input)

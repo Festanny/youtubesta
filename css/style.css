@@ -197,36 +197,50 @@ header .btn-header .nav-lk-lang .lk-user {
     grid-template-columns: 1fr;
     gap: 30px;
 }
-.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item {
+.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item,
+.featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item {
     display: grid;
     grid-template-columns: auto auto;
     padding: 22px 35px 22px 40px;
     gap: 40px;
 }
-.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item img {
+.featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item {
+    display: grid!important;
+}
+.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item img,
+.featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item img {
     width: 134px;
     height: 114px;
     object-fit: contain;
 }
-.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item .textMain p {
+.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item .textMain ,
+.featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item .textMain {
     color: var(--color-2);
 }
-.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item .textMain .h3 {
+.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item .textMain .h3,
+.featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item .textMain .h3 {
     margin-bottom: 20px;
 }
-.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item .textMain {
+.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item .textMain,
+.featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item .textmain {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
-.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item:nth-of-type(1) {
+.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item:nth-of-type(1),
+.featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .slick-slide:nth-of-type(1) .item {
     background: #F9F8FF;
 }
-.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item:nth-of-type(2) {
+.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item:nth-of-type(2),
+.featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .slick-slide:nth-of-type(2) .item {
     background: #FFFCF6;
 }
-.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item:nth-of-type(3) {
+.featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item:nth-of-type(3),
+.featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .slick-slide:nth-of-type(3) .item {
     background: #F0FFFC;
+}
+.featuresOfUse .featuresOfUseMain .featuresOfUse-carousel {
+    display: none;
 }
 .linkA {
     width: 100%;
@@ -535,14 +549,16 @@ section.featuresOfUse {
 .startPromoteMain .order-block .carousel-form-block {
     position: relative;
 }
-.startPromoteMain .order-block .carousel-form-block .slick-list {
+.startPromoteMain .order-block .carousel-form-block .slick-list,
+.work .workMain .work-carousel {
     width: calc(100% - 146px);
     margin: 0 auto;
 }
 .startPromoteMain .order-block .carousel-form-block .slick-list .slick-slide {
     margin: 0 15px;
 }
-.startPromoteMain .order-block .carousel-form-block .slick-rev div {
+.startPromoteMain .order-block .carousel-form-block .slick-rev div,
+.work .workMain .work-carousel-main .slick-rev div {
     width: 33px;
     height: 33px;
     display: flex;
@@ -552,7 +568,8 @@ section.featuresOfUse {
     background-color: var(--gray);
     cursor: pointer;
 }
-.startPromoteMain .order-block .carousel-form-block .slick-rev {
+.startPromoteMain .order-block .carousel-form-block .slick-rev,
+.work .workMain .work-carousel-main .slick-rev {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -560,6 +577,9 @@ section.featuresOfUse {
     top: 50%;
     transform: translateY(-50%);
     z-index: 10;
+}
+.work .workMain .work-carousel-main {
+    position: relative;
 }
 .work .workMain .title .h2 {
     position: relative;
@@ -585,14 +605,27 @@ section.featuresOfUse {
     display: flex;
     flex-direction: column;
 }
-.work .workMain .info-block .item .textBlock {
+.work .workMain .work-carousel-main {
+    display: none;
+}
+.work .workMain .info-block .item .textBlock,
+.work .workMain .work-carousel .item .textBlock {
     color: var(--white);
     background-color: var(--color-5);
     padding: 28px;
     position: relative;
     min-height: 180px;
 }
-.work .workMain .info-block .item .textBlock::after {
+.work .workMain .work-carousel .item .textBlock .number {
+    position: absolute;
+    top: -25px;
+    font-weight: 900;
+    font-size: 36px;
+    color: transparent;
+    -webkit-text-stroke: 3px var(--color-3);
+}
+.work .workMain .info-block .item .textBlock::after,
+.work .workMain .work-carousel .item .textBlock::after {
     position: absolute;
     font-weight: 900;
     font-size: 36px;
@@ -615,7 +648,8 @@ section.featuresOfUse {
     content: '04.';
     bottom: -25px;
 }
-.work .workMain .info-block .item:nth-of-type(2n-1) .textBlock::before {
+.work .workMain .info-block .item:nth-of-type(2n-1) .textBlock::before,
+.work .workMain .work-carousel .item:nth-of-type(2n-1) .textBlock::before {
     content: '';
     position: absolute;
     width: 0;
@@ -627,27 +661,33 @@ section.featuresOfUse {
     bottom: -30px;
     transform: translateX(-50%);
 }
-.work .workMain .info-block .item .textBlock .h3 {
+.work .workMain .info-block .item .textBlock .h3,
+.work .workMain .work-carousel .item .textBlock .h3 {
     margin-bottom: 18px;
 }
-.work .workMain .info-block .item .textBlock p {
+.work .workMain .info-block .item .textBlock p,
+.work .workMain .work-carousel .item .textBlock p {
     font-weight: 300;
 }
-.work .workMain .info-block .item .textBlock p:last-of-type {
+.work .workMain .info-block .item .textBlock p:last-of-type,
+.work .workMain .work-carousel .item .textBlock p:last-of-type {
     margin-bottom: 0;
 }
-.work .workMain .info-block .item .imgBlock {
+.work .workMain .info-block .item .imgBlock,
+.work .workMain .work-carousel .item .imgBlock {
     width: 100%;
     height: 210px;
 }
-.work .workMain .info-block .item .imgBlock img {
+.work .workMain .info-block .item .imgBlock img,
+.work .workMain .work-carousel .item .imgBlock img {
     width: 100%;
     height: 100%;
     object-fit: contain;
     border-radius: 240px;
     border: 3px solid #F2F2F2;
 }
-.work .workMain .info-block .item .titleBlock {
+.work .workMain .info-block .item .titleBlock,
+.work .workMain .work-carousel .item .titleBlock {
     padding: 16px;
     text-align: center;
     border-radius: 8px;
@@ -660,7 +700,8 @@ section.featuresOfUse {
 .work .workMain .info-block .item:nth-child(2n) {
     /* flex-direction: column-reverse; */
 }
-.work .workMain .info-block .item:nth-of-type(2n) .textBlock::before {
+.work .workMain .info-block .item:nth-of-type(2n) .textBlock::before,
+.work .workMain .work-carousel .item:nth-of-type(2n) .textBlock::before {
     content: '';
     position: absolute;
     width: 0;
@@ -675,10 +716,13 @@ section.featuresOfUse {
 .work .linkA {
     margin-top: 90px;
 }
+.work-carousel .item {
+    padding: 20px 10px 0;
+}
 .payment .paymentMain .info-block {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 20px;
+    gap: 20px;
     margin-bottom: 80px;
 }
 .payment .paymentMain .info-block .block {
@@ -825,7 +869,8 @@ footer {
     color: var(--white)
 }
 footer .footer {
-    padding: 55px 0;
+    padding-top: 55px;
+    padding-bottom: 55px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
     gap: 95px;
@@ -839,6 +884,7 @@ footer .footer .block .img-logo img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    object-position: left;
 }
 footer .footer .block ul.navA {
     margin: 0;
@@ -867,6 +913,7 @@ footer .footer .block.contactEmail {
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
+    align-items: baseline;
 }
 footer .footer .block.contactEmail a {
     display: flex;

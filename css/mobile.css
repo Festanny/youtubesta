@@ -28,6 +28,15 @@
     .welcomeBlock .welcomeBlockMain {
         width: 50%;
     }
+    .payment .paymentMain .info-block {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .freeGuide .info-block-guide {
+        gap: 50px;
+    }
+    .freeGuide {
+        padding: 50px;
+    }
 }
 @media screen and (max-width: 991px) {
     .welcomeBlock .welcomeBlockMain .h2 {
@@ -48,6 +57,26 @@
     .featuresOfUse .featuresOfUseMain .info-block .block.img-block {
         width: 60%;
         margin: 0 auto;
+    }
+    .work .workMain .info-block {
+        display: none;
+    }
+    .work .workMain .work-carousel-main {
+        display: block;
+    }
+    .work .workMain .info-block .item .textBlock p,
+    .work .workMain .work-carousel .item .textBlock p {
+        font-size: 15px;
+    }
+    .freeGuide .info-block-guide {
+        gap: 30px;
+        grid-template-columns: 1fr;
+    }
+    .freeGuide .info-block-guide .block .inputEmail {
+        margin-bottom: 25px;
+    }
+    .work .linkA {
+        margin-top: 75px;
     }
 }
 @media screen and (max-width: 800px) {
@@ -103,5 +132,64 @@
         background-image: url('../images/clouds.png');
         background-repeat: no-repeat;
         background-size: cover
+    }
+    .featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item {
+        gap: 20px;
+    }
+    .startPromote .paymentMain .payment {
+        grid-template-columns: 1fr;
+    }
+}
+@media screen and (max-width: 650px) {
+    header .header nav,
+    header .header .btn-header .order-promotion {
+        display: none;
+    }
+    header .header {
+        grid-template-columns: auto auto;
+    }
+    header .btn-header {
+        grid-column: auto;
+    }
+    .welcomeBlock .welcomeBlockMain {
+        width: 100%;
+    }
+    .startPromote .paymentMain .payment .methodInput .selectionMethod .methodImg {
+        width: 90px;
+        height: 40px;
+    }
+    footer .footer {
+        gap: 50px;
+    }
+    .payment .paymentMain .info-block .block {
+        padding: 15px 25px;
+    }
+}
+@media screen and (max-width: 480px) {
+    .featuresOfUse .featuresOfUseMain .info-block {
+        display: none;
+    }
+    .featuresOfUse .featuresOfUseMain .featuresOfUse-carousel {
+        display: block;
+    }
+    footer .footer {
+        grid-template-columns: 1fr;
+    }
+    footer .footer .block .img-logo {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+
+@media screen and (max-width: 390px) {
+    header .header .logo-img {
+        width: 120px;
+    }
+    header .btn-header, header .btn-header .nav-lk-lang {
+        font-size: 14px;
+    }
+    header .btn-header .nav-lk-lang a {
+        padding: 7px;
     }
 }
