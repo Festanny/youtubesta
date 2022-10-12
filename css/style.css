@@ -89,6 +89,7 @@ header .btn-header .nav-lk-lang {
     font-size: 15px;
     justify-content: space-between;
     flex-wrap: wrap;
+    text-align: center;
 }
 header .btn-header {
     gap: 80px;
