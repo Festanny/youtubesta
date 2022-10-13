@@ -78,6 +78,12 @@
     .work .linkA {
         margin-top: 75px;
     }
+    .freeGuide .info-block-guide .block.dieBlock {
+        order: 1;
+    }
+    .freeGuide .info-block-guide .block.getFree {
+        order: 2;
+    }
 }
 @media screen and (max-width: 800px) {
     .welcomeBlock .welcomeBlockMain .h1 {
@@ -178,6 +184,12 @@
     footer .footer .block .img-logo {
         display: inline-block;
         width: auto;
+    }
+    .featuresOfUse .featuresOfUseMain .linkA {
+        display: none;
+    }
+    .startPromoteMain .order-block .carousel-form-block .slick-list, .work .workMain .work-carousel {
+        width: calc(100% - 90px);
     }
 }
 

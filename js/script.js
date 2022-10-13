@@ -15,8 +15,10 @@ $('.carousel-form').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     dots: false,
+    arrows: false,
     infinite: false,
     draggable: false,
+    swipe: false,
     responsive: [
       {
         breakpoint: 991,
@@ -44,10 +46,11 @@ $('.work-carousel').slick({
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-    dots: false,
+    dots: true,
     infinite: false,
     draggable: false,
     arrows: false,
+    dotsClass: 'slick-dots dots-featuresOfUse',
     responsive: [
       {
         breakpoint: 991,
@@ -70,7 +73,7 @@ $('.prev-rev-work').click(() => {
     $('.work-carousel').slick('slickPrev');
 });
 
-// слайдер для quick order
+// слайдер для featuresOfUse
 $('.featuresOfUse-carousel').slick({
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -78,6 +81,7 @@ $('.featuresOfUse-carousel').slick({
     infinite: false,
     draggable: false,
     arrows: false,
+    dotsClass: 'slick-dots dots-featuresOfUse',
     responsive: [
       {
         breakpoint: 991,

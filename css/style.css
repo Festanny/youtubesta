@@ -12,6 +12,7 @@
     --color-6: #43008D;
     --gr: linear-gradient(90deg, rgba(242,166,17,1) 0%, rgba(255,117,38,1) 100%);
     --gray: #F0EBEB;
+    --gray2: #D3D3D3;
     --grayBtn: #A6A5A5;
     --border: #393535;
     --blue: #3771C7;
@@ -241,6 +242,7 @@ header .btn-header .nav-lk-lang .lk-user {
 }
 .featuresOfUse .featuresOfUseMain .featuresOfUse-carousel {
     display: none;
+    padding-bottom: 20px;
 }
 .linkA {
     width: 100%;
@@ -553,6 +555,9 @@ section.featuresOfUse {
 .work .workMain .work-carousel {
     width: calc(100% - 146px);
     margin: 0 auto;
+}
+.work .workMain .work-carousel {
+    padding-bottom: 30px;
 }
 .startPromoteMain .order-block .carousel-form-block .slick-list .slick-slide {
     margin: 0 15px;
@@ -1020,6 +1025,21 @@ footer .footer_sub .item:nth-child(3) {
 }
 section.startPromote.quickPage {
     padding-top: 30px;
+}
+.slick-slider .dots-featuresOfUse {
+    display: flex!important;
+    justify-content: center;
+    width: 100%;
+    bottom: -20px
+}
+.slick-slider .dots-featuresOfUse li {
+    background-color: var(--gray2);
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+}
+.slick-slider .dots-featuresOfUse li.slick-active {
+    background-color: var(--color-3)
 }
 
 @keyframes arrowsEffects {
