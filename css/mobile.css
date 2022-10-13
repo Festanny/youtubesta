@@ -278,6 +278,9 @@
     section.featuresOfUse {
         padding-bottom: 90px;
     }
+    .breadcrumbs {
+        margin-bottom: 25px;
+    }
 }
 @media screen and (max-width: 450px) {
     header .header .logo-img {
@@ -551,6 +554,15 @@
     }
     header .header {
         gap: 10px;
+    }
+    section.startPromote.quickPage {
+        padding-top: 20px!important;
+    }
+    .breadcrumbs {
+        margin-bottom: 40px;
+    }
+    section.quickPage .title .h2 {
+        font-size: 30px;
     }
 }
 @media screen and (max-width: 340px) {

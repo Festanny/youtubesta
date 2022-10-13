@@ -1036,7 +1036,7 @@ footer .footer_sub .item:nth-child(3) {
     color: var(--color-1)
 }
 section.startPromote.quickPage {
-    padding-top: 30px;
+    padding-top: 30px!important;
 }
 .slick-slider .dots-featuresOfUse {
     display: flex!important;
@@ -1052,6 +1052,9 @@ section.startPromote.quickPage {
 }
 .slick-slider .dots-featuresOfUse li.slick-active {
     background-color: var(--color-3)
+}
+.othersPage .questions {
+    margin-top: 20px;
 }
 
 @keyframes arrowsEffects {
