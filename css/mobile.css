@@ -37,6 +37,9 @@
     .freeGuide {
         padding: 50px;
     }
+    .startPromote .paymentMain .payment {
+        grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+    }
 }
 @media screen and (max-width: 991px) {
     .welcomeBlock .welcomeBlockMain .h2 {
@@ -69,7 +72,7 @@
         font-size: 15px;
     }
     .freeGuide .info-block-guide {
-        gap: 30px;
+        gap: 40px;
         grid-template-columns: 1fr;
     }
     .freeGuide .info-block-guide .block .inputEmail {
@@ -83,6 +86,28 @@
     }
     .freeGuide .info-block-guide .block.getFree {
         order: 2;
+    }
+    .questions .questionsBlock .text1 {
+        font-size: 25px;
+    }
+    .questions .questionsBlock .text2 {
+        font-size: 18px;
+    }
+    .questions .questionsBlock .info-block {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .questions .questionsBlock .linkA {
+        margin-top: 40px;
+    }
+    .startPromote .paymentMain .payment .methodInput {
+        order: 2;
+    }
+    .startPromote .paymentMain .payment .summaryInfo {
+        order: 1;
+    }
+    .startPromote .paymentMain .payment .emailInput {
+        order: 3;
     }
 }
 @media screen and (max-width: 800px) {
@@ -139,11 +164,35 @@
         background-repeat: no-repeat;
         background-size: cover
     }
-    .featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item {
+    section:not(.welcomeBlock),
+    section.featuresOfUse {
+        padding: 70px 0;
+    }
+    .featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item, .featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item {
         gap: 20px;
     }
     .startPromote .paymentMain .payment {
         grid-template-columns: 1fr;
+    }
+    footer .footer_sub {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    footer .footer_sub .item:nth-child(1) {
+        order: 1
+    }
+    footer .footer_sub .item:nth-child(2) {
+        order: 3
+    }
+    footer .footer_sub .item:nth-child(3) {
+        order: 2;
+        text-align: center;
+    }
+    .work .workMain .info-block .item .textBlock p, .work .workMain .work-carousel .item .textBlock p {
+        font-size: 18px;
+    }
+    .startPromoteMain .order-block .carousel-form-block .slick-list .slick-slide {
+        margin: 0;
     }
 }
 @media screen and (max-width: 650px) {
@@ -191,17 +240,333 @@
     .startPromoteMain .order-block .carousel-form-block .slick-list, .work .workMain .work-carousel {
         width: calc(100% - 90px);
     }
+    .welcomeBlock .welcomeBlockMain .textInfo .inputLink input,
+    .welcomeBlock .welcomeBlockMain .textInfo .inputLink input:nth-of-type(2) {
+        padding: 14px 25px;
+    }
+    header .header .logo-img {
+        width: 130px;
+    }
+    .h2 {
+        font-size: 25px;
+    }
+    .freeGuide .info-block-guide .block.dieBlock .text1 {
+        font-size: 20px;
+    }
+    .freeGuide .info-block-guide .block.dieBlock .text2 {
+        font-size: 28px;
+    }
+    .freeGuide .info-block-guide .block.dieBlock::before {
+        width: 200px;
+        height: 120px;
+    }
+    .freeGuide .info-block-guide .block.dieBlock {
+        padding: 55px 50px 120px;
+    }
+    .freeGuide .info-block-guide .block .h2 {
+        font-size: 23px;
+    }
+    .freeGuide .info-block-guide .block p {
+        font-size: 20px;
+    }
+    .freeGuide {
+        padding: 30px;
+    }
+    .payment .paymentMain .info-block .block .paymentImg {
+        padding: 15px 20px;
+    }
+    section.featuresOfUse {
+        padding-bottom: 90px;
+    }
+}
+@media screen and (max-width: 450px) {
+    header .header .logo-img {
+        width: 120px;
+    }
+    header .btn-header .nav-lk-lang a {
+        padding: 10px;
+    }
+    .featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item img, .featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item img {
+        width: 115px;
+        height: 105px;
+    }
+    .featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item, .featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item {
+        padding: 15px 20px;
+    }
+    .featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item .textMain .h3, .featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item .textMain .h3 {
+        font-size: 19px;
+    }
+    .featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item .textMain, .featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item .textMain {
+        font-size: 15px;
+    }
+    .title {
+        margin: 0 auto 30px;
+    }
+    section:not(.welcomeBlock) {
+        padding: 60px 0;
+    }
+    section.featuresOfUse {
+        padding-bottom: 80px;
+    }
 }
 
 
 @media screen and (max-width: 390px) {
-    header .header .logo-img {
-        width: 120px;
-    }
     header .btn-header, header .btn-header .nav-lk-lang {
         font-size: 14px;
     }
     header .btn-header .nav-lk-lang a {
         padding: 7px;
+    }
+    header {
+        padding: 40px 0;
+    }
+    .welcomeBlock {
+        padding-bottom: 180px;
+    }
+    section:not(.welcomeBlock):not(.featuresOfUse) {
+        padding: 40px 0;
+    }
+    section:not(.welcomeBlock) {
+        padding: 40px 0;
+    }
+    section.featuresOfUse {
+        padding-bottom: 70px;
+    }
+    .h2 {
+        font-size: 20px;
+    }
+    .title {
+        margin-bottom: 25px;
+    }
+    .startPromote .startPromoteMain .info-block {
+        gap: 15px;
+    }
+    .startPromote .startPromoteMain .info-block .block .block-text {
+        display: flex;
+        align-items: center;
+        padding: 12px;
+        gap: 20px;
+    }
+    .startPromote .startPromoteMain .info-block .block .block-text img {
+        width: 70px;
+        height: 70px;
+    }
+    .startPromote .startPromoteMain .info-block .block .block-text .h3 {
+        font-size: 14px;
+    }
+    .startPromote .startPromoteMain .info-block .block::before {
+        border-top-width: 36px;
+        border-left-width: 65px;
+    }
+    .startPromote .startPromoteMain .info-block {
+        margin-bottom: 50px;
+    }
+    .h3 {
+        font-size: 16px;
+    }
+    .startPromote .startPromoteMain .order-block input.inputRel {
+        font-size: 14px;
+    }
+    .startPromote .startPromoteMain .order-block .carousel-form .item .title-service .h3 {
+        font-size: 20px;
+    }
+    .startPromote .startPromoteMain .order-block .qty-sum .sum {
+        font-size: 18px;
+    }
+    .startPromote .startPromoteMain .order-block .carousel-form .item .btn-settings a {
+        font-size: 18px;
+    }
+    .startPromote .paymentMain {
+        margin-top: 35px;
+    }
+    .startPromote .paymentMain .payment label {
+        margin-bottom: 15px;
+    }
+    .startPromote .paymentMain .payment .summaryInfo .summeryInfoBlock .totalPay,
+    .startPromote .paymentMain .payment .summaryInfo .summeryInfoBlock .commissionText {
+        font-size: 14px;
+    }
+    .startPromote .paymentMain .payment .summaryInfo .summeryInfoBlock .totalPay .boldText {
+        font-size: 28px;
+    }
+    .startPromote .paymentMain .payment .summaryInfo .haveCode {
+        margin-right: 0;
+    }
+    .startPromote .paymentMain .payment .methodInput select {
+        padding: 20px 58px 20px 115px;
+        font-size: 18px;
+    }
+    .startPromote .paymentMain .payment .methodInput .selectionMethod::before {
+        width: 18px;
+        height: 18px;
+        right: 22px;
+    }
+    .startPromote .paymentMain .payment {
+        margin-bottom: 0;
+    }
+    .startPromote .paymentMain {
+        gap: 40px;
+    }
+    .work .workMain .title {
+        margin-bottom: 30px;
+    }
+    .work .workMain .info-block .item .textBlock .h3, .work .workMain .work-carousel .item .textBlock .h3 {
+        font-size: 20px;
+    }
+    .work .workMain .info-block .item .textBlock p, .work .workMain .work-carousel .item .textBlock p {
+        font-size: 16px;
+    }
+    .work .linkA {
+        margin-top: 50px;
+    }
+    .work .linkA a {
+        width: 100%;
+        display: block;
+        font-size: 24px;
+    }
+    .payment .paymentMain .info-block .block {
+        padding: 14px 25px;
+    }
+    .payment .paymentMain .info-block .block .paymentImg {
+        height: 70px;
+    }
+    .payment .paymentMain .info-block {
+        margin-bottom: 50px;
+    }
+    .freeGuide {
+        padding: 54px 12px;
+    }
+    .freeGuide .info-block-guide .block.dieBlock {
+        padding: 56px 30px 80px;
+    }
+    .freeGuide .info-block-guide .block.dieBlock::before {
+        width: 150px;
+        height: 87px;
+        right: -5px;
+    }
+    .freeGuide .info-block-guide {
+        gap: 65px;
+    }
+    .freeGuide .info-block-guide .block .h2 {
+        margin-bottom: 22px;
+    }
+    .freeGuide .info-block-guide .block .h2,
+    .freeGuide .info-block-guide .block p {
+        font-size: 20px;
+    }
+    .freeGuide .info-block-guide .block.dieBlock .text2 {
+        font-size: 24px;
+    }
+    .freeGuide .info-block-guide .block.dieBlock .text1 {
+        font-size: 18px;
+    }
+    .freeGuide .info-block-guide .block p:last-of-type {
+        margin-bottom: 27px;
+    }
+    .freeGuide .info-block-guide .block .inputEmail span,
+    .freeGuide .info-block-guide .block .btnFreeGuide,
+    .questions .questionsBlock .text2 {
+        font-size: 16px;
+    }
+    .freeGuide .info-block-guide .block .inputEmail input {
+        font-size: 14px;
+    }
+    section.payment {
+        padding-bottom: 70px!important;
+    }
+    .questions .questionsBlock .text1 {
+        font-size: 20px;
+    }
+    .questions .questionsBlock .text2 {
+        margin-bottom: 40px;
+    }
+    .questions .questionsBlock .info-block .block:first-of-type,
+    .questions .questionsBlock .info-block {
+        gap: 20px;
+    }
+    footer .footer {
+        text-align: center;
+    }
+    footer .footer .block ul.navA {
+        grid-template-columns: 1fr;
+    }
+    footer .footer .block.linkSoc {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    footer .footer .block.contactEmail,
+    footer .footer_sub .item:nth-child(1) {
+        display: none;
+    }
+    footer .footer_sub .item:nth-child(2) {
+        order: 1;
+        text-align: left;
+        font-size: 14px;
+    }
+    footer .footer_sub .item:nth-child(3) {
+        order: 2;
+        text-align: left;
+        font-size: 12px;
+    }
+    footer .footer_sub {
+        grid-template-columns: 1fr 1fr;
+        text-align: left;
+        color: #A09E9E;
+    }
+    footer .footer_sub a {
+        color: #A09E9E;
+    }
+    .featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item .textMain .h3 {
+        font-size: 18px;
+    }
+    .featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item .textMain p {
+        font-size: 14px;
+    }
+    .featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item, .featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item {
+        padding: 27px 8px;
+    }
+    .featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item img, .featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item img {
+        width: 105px;
+        height: 95px;
+    }
+    .featuresOfUse .featuresOfUseMain .info-block .block.blocksInfo .item .textMain .h3, .featuresOfUse .featuresOfUseMain .featuresOfUse-carousel .item .textMain .h3 {
+        margin-bottom: 15px;
+    }
+    .welcomeBlock .welcomeBlockMain .h1 {
+        font-size: 40px;
+    }
+    .welcomeBlock .welcomeBlockMain .h2 {
+        font-size: 22px;
+    }
+    .welcomeBlock .welcomeBlockMain .textInfo .inputLink input, .welcomeBlock .welcomeBlockMain .textInfo .inputLink input:nth-of-type(2) {
+        font-size: 14px;
+    }
+    .welcomeBlock .welcomeBlockMain .h1 {
+        margin-bottom: 10px;
+    }
+    .welcomeBlock .welcomeBlockMain .h2 {
+        margin-bottom: 45px;
+    }
+    header .header {
+        gap: 10px;
+    }
+}
+@media screen and (max-width: 340px) {
+    header .header {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    header {
+        padding: 30px 0;
+    }
+    .welcomeBlock .welcomeBlockMain .textInfo .inputLink {
+        grid-auto-flow: row;
+        gap: 5px;
+    }
+    .welcomeBlock .welcomeBlockMain .textInfo .inputLink input:nth-of-type(1),
+    .welcomeBlock .welcomeBlockMain .textInfo .inputLink input:nth-of-type(2) {
+        transform: none;
     }
 }

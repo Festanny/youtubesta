@@ -27,7 +27,7 @@ $('.carousel-form').slick({
         }
       },
       {
-        breakpoint: 767,
+        breakpoint: 768,
         settings: {
           slidesToShow: 1,
         }
@@ -99,7 +99,7 @@ $('.featuresOfUse-carousel').slick({
 });
 
 // quantity and coast (input)
-$('.startPromote .startPromoteMain .order-block .qty-sum input').on('input', function(el) {
+$('.startPromote .startPromoteMain .order-block .qty-sum input').on('click change input', function(el) {
     var elemInput = $(el.target)[0],
         coefficient = $(el.target).attr('data-coefficient'),
         inputNum = $(el.target).attr('data-input'),
